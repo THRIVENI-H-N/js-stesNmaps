@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mapNsets</title>
+</head>
+<body>
+
+    <!-- ypu are given a strng of length N, consisting of only the lower case English alphabet. your task s to remove all the duplicate occurrences of characters n the string. -->
+    arr = ['1','1','1','2','2','3','4','5','5'];
+
+const uniqueValues = (array)=>(
+    arr.filter((curr,index,ref)=>(
+         ref.indexOf(curr) === index
+    ))
+
+)
+
+console.log(uniqueValues(arr))
+
+<!-- you are given a string of length N, you have to print the count of all alphabet -->
+
+function CharWithFreq(s)
+{
+  // Store all characters and
+  // their frequencies in dictionary
+  let d = new Map();
+  console.log(d);
+ 
+  s.split('').forEach(element => {
+     
+        if(d.has(element))
+        {
+           console.log( d.set(element, d.get(element)+1));
+        }
+        else
+           console.log( d.set(element, 1));
+  });
+
+  console.log(d);
+}   
+
+let s="abcadeecfb";
+CharWithFreq(s);
+
+</body>
+</html>
